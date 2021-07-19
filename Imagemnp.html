@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Detection System | Image Manipulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color:#121222;">
+        <div class="container"><a class="navbar-brand" href="imagemnp.html" style="color:rgb(255,255,255);">Full Image Manipulation</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">
+                        <strong></strong>
+                        <input type="file" 
+                        name="myfile"
+                        id="myfile"
+                        accept="image/*"
+                        onchange="loadFile(event)"
+                        style="display: none;"/>
+                    </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html" style="color:rgb(255,255,255);">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#feature" style="color:rgb(255,255,255);">About</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.html" style="color:rgb(255,255,255);">Login</a></li>
+                     <li class="dropdown"><a class="dropdown-toggle nav-link text-monospace text-capitalize dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color:rgb(255,255,255);"><strong>Multimedia</strong></a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="Imagemnp.html">Full image</a>
+                                <a class="dropdown-item" role="presentation" href="Facemnp.html">Face</a>
+                                <a class="dropdown-item" role="presentation" href="Videomnp.html">Video</a>
+                                <a class="dropdown-item" role="presentation" href="#">Audio</a>
+                            </div>
+                        </li>
+                   
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <section class="main">
+        <div class="container">
+            <div class="main-outer">
+                <div class="main-left">
+                    <aside>
+                        <h3>Image Filters</h3>
+                        <form id="slider-form">
+                            <tr>
+                                <td><button class="mybutton" onclick="crop()">Crop</button></td>  
+                                <td><button class="mybutton" style="margin-right: 10px;"onclick="flipVertically()">Flip</button></td>    
+                                <td><label for="rt">Rotate</label>
+                                    <input id="rt" name="rt" type="range" min="" max="100" value="0" class="slider"></td>                     
+                            </tr>
+                            
+                            <p>
+                                <label for="gs">Grayscale</label>
+                                <input id="gs" name="gs" type="range" min="" max="100" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="blur">Blur</label>
+                                <input id="blur" name="blur" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="hue-rotate">Hue</label>
+                                <input id="hue-rotate" name="hue-rotate" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+
+                            <p>
+                                <label for="sepia">Sepia</label>
+                                <input id="sepia" name="sepia" type="range" min="0" max="" value="0" class="slider">
+                            </p>
+                            
+                            <button type="reset" >Reset</button>
+                        </form>
+                    </aside>
+                </div>
+                <div class="main-right">
+                    <form id="myform">
+                        <div> <label for="myfile">Select a file:</label>
+                            <input type="file" id="myfile" name="myfile" accept="image/*"
+                            onchange="loadFile(event)"/>
+                            <button type="submit">Predict</button>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Image URL" id="onlineurl">
+                            <button type="submit" >Submit</button>
+                        
+                        </div>
+                      
+                    </form>
+                    <div class="img-area">
+                        <img src="assets/img/car.jpg" id="targetimage" alt="">
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+    <script src="https://rawcdn.githack.com/kousik19/foto.js/045defe1a5ce06220e084e4e6f6fbaccb7621841/foto.min.js"></script>
+</body>
+</html>
