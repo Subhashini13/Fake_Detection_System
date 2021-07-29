@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Fake Detection System || Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Fake Detection System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="background-color:rgb(18,18,34);">
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color:#121222;">
+            <div class="container"><a class="navbar-brand" href="index.html" style="color:rgb(255,255,255);">Fake Detection System</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#home" style="color:rgb(255,255,255);">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#feature" style="color:rgb(255,255,255);">About</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="login.html" style="color:rgb(255,255,255);">Login</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="signup.html" style="color:rgb(255,255,255);">SignUp</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle nav-link text-monospace text-capitalize dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color:rgb(255,255,255);"><strong>Multimedia</strong></a>
+                            <div class="dropdown-menu"
+                                role="menu"><a class="dropdown-item" role="presentation" href="Imagemnp.html">Full image</a><a class="dropdown-item" role="presentation" href="Facemnp.html">Face</a><a class="dropdown-item" role="presentation" href="Videomnp.html">Video</a>
+                                <a
+                                    class="dropdown-item" role="presentation" href="#">Audio</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-7">
+                <img src="assets/img/Fade-In-Background.svg">
+            </div>
+
+            <div class="col-sm-5" style="text-align: center;">
+
+                <h2 style="color:orange">SIGN UP</h2>
+
+                    <form  action="signup_script.php" method="POST">
+
+                        <div class="form-group col-sm-10">
+                            <input class="form-control" placeholder="Name" name="name" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" required>
+                        </div>
+
+                        <div class="form-group col-sm-10">
+                                <input type="email" class="form-control"  placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  name="email" required>
+                               
+                        </div>
+
+                        <div class="form-group col-sm-10">
+                                <input type="password" class="form-control" placeholder="Password" pattern=".{6,}" name="password" required>
+                        </div>
+
+                        <div class="form-group col-sm-10">
+                                <input type="text" class="form-control"  placeholder="Contact" maxlength="10" size="10" name="contact" required>
+                                
+                        </div>
+
+                        <div class="form-group col-sm-10">
+                                <input  type="text" class="form-control"  placeholder="City" name="city"  >
+                        </div>
+
+                        <div class="form-group col-sm-10">
+                                <input  type="text" class="form-control"  placeholder="Address" name="address" >
+                        </div>
+
+                        <div class="col-sm-10">
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                        </div>  
+                        <div class="col-sm-10">
+                            Already have an account ?<a href="login.html"> Login</a>
+                        </div>
+
+                </form>
+        </div>
+    </div>
+    </div>
+
+      
+    </body>
+</html>
